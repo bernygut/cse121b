@@ -23,19 +23,15 @@ imageElement.setAttribute ("src", profilePicture);
 imageElement.setAttribute ("alt", `Profile image of ${fullName}`);
 
 /* Step 5 - Array */
-foods = ["spagetti", "pizza", "steak", "grilled cheese"] /* 5.1 */
+foods = ["spagetti", "pizza", "steak", "grilled cheese"] /* 5.1 Declare array*/
+foodElement.innerHTML = `${foods}`;/* 5.2  Display array in foodElement - Original*/
 
-foodElement.innerHTML = `${foods}`;/* 5.2 */
+additionalFood = "fried rice";/* 5.3 Declare and instantiate a variable to hold another single favorite food item. */ 
+foods.push(additionalFood); /* 5.4 Add the value stored in this new variable to your favorite food array - Added at the end*/
+foodElement.innerHTML += `<br>${foods}`; /* 5.5 Display array in foodElement - Original+Additional*/
 
-additionalFood = "fried rice";/* 5.3 */ 
-foods.push(additionalFood); /* 5.4 */
-foodElement.innerHTML += `<br>${foods}`; /* 5.5 */
+foods.shift();/* 5.6 Remove the first element*/
+foodElement.innerHTML += `<br>${foods}`; /* 5.7 Display array in foodElement - Original+Additional with first element removed*/
 
-foods.shift();/* 5.6 */
-foodElement.innerHTML += `<br>${foods}`; /* 5.7 */
-
-foods.pop();/* 5.8 */
-foodElement.innerHTML += `<br>${foods}`; /* 5.9 */
-
-
-
+foods.pop();/* 5.8 Remove the last element*/
+foodElement.innerHTML += `<br>${foods}`; /* 5.9 Display array in foodElement - Original without the first element or the element that was added temporarily at the end */
