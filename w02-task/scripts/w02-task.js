@@ -13,7 +13,7 @@ let profilePicture = "images/BernardinoGutierrez.png";
 const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 const yearElement = document.querySelector("#year");
-const imageElement = new Image();
+const imageElement = document.querySelector("img");
 
 
 /* Step 4 - Adding Content */
@@ -29,7 +29,6 @@ foodElement.innerHTML = `${foods}`;/* 5.2 */
 
 additionalFood = "fried rice";/* 5.3 */ 
 foods.push(additionalFood); /* 5.4 */
-
 foodElement.innerHTML += `<br>${foods}`; /* 5.5 */
 
 foods.shift();/* 5.6 */
