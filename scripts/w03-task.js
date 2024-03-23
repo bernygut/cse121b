@@ -3,7 +3,7 @@
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
 
-document.querySelector("#addNumbers").addEventListerner("click", addNumbers);
+document.querySelector("#addNumbers").addEventListener("click", addNumbers);
 
 function add (number1, number2){
     return number1 + number2;
