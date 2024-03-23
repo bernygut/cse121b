@@ -2,6 +2,9 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
+
+document.querySelector("#addNumbers").addEventListerner("click", addNumbers);
+
 function add (number1, number2){
     return number1 + number2;
 }
@@ -11,8 +14,6 @@ function addNumbers (){
     let InputNumber2 = Number(document.querySelector("#add2").value);
     document.querySelector("#sum").value = add(InputNumber1, InputNumber2);
 }
-
-document.querySelector("#addNumbers").addEventListerner("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
 
