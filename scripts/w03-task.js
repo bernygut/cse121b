@@ -57,16 +57,36 @@ document.querySelector("#divideNumbers").addEventListener("click", divideNumbers
 
 /* Decision Structure */
 
+function getTotal () {
+    let SubTotalInputNumber = Number(document.querySelector("#subtotal").value); 
+
+    let membershipSelected = document.querySelector("#member");
+    /*console.log("membershipSelected:", membershipSelected);*/
+    let isSelected = membershipSelected.checked
+    /*console.log("isSelected:", isSelected); */
+    if  (isSelected) {
+        let formattedTotal = (SubTotalInputNumber * 0.8).toFixed(2);
+        document.getElementById("total").textContent = `$${formattedTotal}`
+    } else {
+        let formattedTotal = SubTotalInputNumber.toFixed(2);
+        document.getElementById("total").textContent = `$${formattedTotal}`
+    }
+}
+
+document.querySelector("#getTotal").addEventListener("click", getTotal);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-
+let array = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.querySelector("#array").innerHTML = array;
 /* Output Odds Only Array */
-
+document.querySelector("#odds").innerHTML = array.filter(number => number % 2 === 1);
 /* Output Evens Only Array */
-
+document.querySelector("#evens").innerHTML = array.filter(number => number % 2 === 0);
 /* Output Sum of Org. Array */
-
+document.querySelector("#sumOfArray").innerHTML = array.reduce((sum, number) => sum + number)
 /* Output Multiplied by 2 Array */
-
+document.querySelector("#multiplied").innerHTML = array.map(number => number * 2)
 /* Output Sum of Multiplied by 2 Array */
+multipliedArray = array.map(number => number * 2)
+document.querySelector("#sumOfMultiplied").innerHTML = multipliedArray.reduce((sum, number) => sum + number)
