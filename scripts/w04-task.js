@@ -88,7 +88,7 @@ myProfile.placesLived.forEach(function (item) {
     document.querySelector("#places-lived").appendChild(thisDt);
   
     let thisDd = document.createElement("dd");
-    //console.log("Length:", item.length);
+    //console.log("Length:", item.length); 
     thisDd.textContent = item.length;
     document.querySelector("#places-lived").appendChild(thisDd);
     }
