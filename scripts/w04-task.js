@@ -13,33 +13,41 @@ let myProfile = {
 myProfile.placesLived.push(
     {
         place: "Rohmoser, Costa Rica",
-        lenght : "17 years"
+        length: "17 years"
     }
 ); 
 
 
 /* Populate Profile Object with placesLive objects */
 
-myProfile.placesLived.add(
+myProfile.placesLived.push(
     {
         place: "Utah Valley, Utah",
-        lenght : "4 years"
-    },
+        length: "4 years"
+    });
+
+myProfile.placesLived.push(
     {
         place: "San Joaquin Valley, California",
-        lenght : "2 years"
-    },
+        length: "2 years"
+    });
+
+myProfile.placesLived.push(
     {
         place: "Escazu, Costa Rica",
-        lenght : "4 years"
-    },
+        length: "4 years"
+    });
+
+myProfile.placesLived.push(
     {
         place: "Ciruelas, Costa Rica",
-        lenght : "10 years"
-    },
+        length: "10 years"
+    });
+
+myProfile.placesLived.push(
     {
         place: "Santa Ana, Costa Rica",
-        lenght : "6 years"
+        length: "6 years"
     }
 ); 
 
@@ -68,10 +76,22 @@ myProfile.favoriteFoods.forEach(function (item) {
 myProfile.hobbies.forEach(function (item) { 
     let thisLi = document.createElement("li");
     thisLi.textContent = item;
-    document.querySelector("#hobies").appendChild(thisLi);
+    document.querySelector("#hobbies").appendChild(thisLi);
     }
 );
 
 /* Places Lived DataList */
+
+myProfile.placesLived.forEach(function (item) { 
+    let thisDt = document.createElement("dt");
+    thisDt.textContent = item.place;
+    document.querySelector("#places-lived").appendChild(thisDt);
+  
+    let thisDd = document.createElement("dd");
+    console.log("Length:", item.length);
+    thisDd.textContent = item.length;
+    document.querySelector("#places-lived").appendChild(thisDd);
+    }
+);
 
 
