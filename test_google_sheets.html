@@ -11,7 +11,7 @@
     <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
     <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
-    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <table><tr id="content"></tr></table> 
 
     <script type="text/javascript">
       /* exported gapiLoaded */
@@ -140,7 +140,7 @@
         }
         // Flatten to string to display
         const output = range.values.reduce(
-            (str, row) => `<td>${str}${row[0]}</td> <td>${row[4]}</td>`,
+            (str, row) => `<td>${str}${row[0]}</td><td>${row[4]}</td>`,
             '<th>Name</th> <th>Major</th>');
         document.getElementById('content').innerText = output;
       }
