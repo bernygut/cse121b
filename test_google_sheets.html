@@ -132,7 +132,7 @@
           document.getElementById('content').innerText = err.message;
           return;
         }
-        console.log(response);
+        console.log(response.result.values);
         const range = response.result;
         if (!range || !range.values || range.values.length == 0) {
           document.getElementById('content').innerText = 'No values found.';
